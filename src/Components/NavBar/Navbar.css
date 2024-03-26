@@ -1,0 +1,28 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #080808;
+  position: sticky;
+  top: 0;
+  padding: 10px 10%;
+  z-index: 3;
+}
+
+.nav-container .nav-option {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-container .nav-option h1 {
+  font-size: 30px;
+  color: #d41308e6;
+  font-weight: 700;
+}
+
+@media (max-width: 575px) {
+  .nav-container {
+    display: block;
+  }
+}

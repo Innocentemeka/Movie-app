@@ -1,0 +1,39 @@
+.input-box-container {
+    display: flex;
+    align-items: center;
+  }
+  
+.input-box-container input {
+    position: relative;
+    width: 250px;
+    height: 5vh;
+    border-radius: 16px;
+    border: none;
+    font-size: 15px;
+  }
+  
+.input-box-container input[type="text"] {
+    padding-right: 30px;
+    padding-left: 15px;
+  }
+  
+.input-box-container button {
+  height: 5vh;
+   padding: 5px 10px;
+   border-radius: 10px;
+   cursor: pointer;
+   border: none;
+   margin-left: 2px;
+  }
+  
+
+  @media (max-width: 575px) {
+    .input-box-container input {
+      width: 100%;
+    }
+    .input-box-container .search {
+      position: absolute;
+      margin-left: 320px;
+     
+    }
+  }
