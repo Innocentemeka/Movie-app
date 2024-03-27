@@ -1,0 +1,44 @@
+.movie-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10%;
+  gap: 15px;
+  background: #080808;
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 80px;
+}
+
+.movie-page-container img {
+  height: 400px;
+  width: 40%;
+}
+
+.movie-page-container .movie-page-details h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.movie-page-container .movie-page-details p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.movie-page-container .movie-page-details h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .movie-page-container {
+    display: block;
+  }
+
+  .movie-page-container img {
+    width: 100%;
+  }
+}

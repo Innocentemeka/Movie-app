@@ -1,9 +1,9 @@
 // import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import InputBox from "./Components/InputBox/InputBox";
-import Movies from "./Components/Movies/Movies";
 import NavBar from "./Components/NavBar/NavBar";
-import Card from "./Components/Card";
+import HomePage from "./Components/HomePage/HomePage";
+import MoviePage from "./Components/MoviePage/MoviePage";
 
 function App() {
   // const [search, setSearch] = useState("");
@@ -36,7 +36,7 @@ function App() {
   // }, [search]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
     <div className="App">
       <div className="nav-container">
         <NavBar />
@@ -44,11 +44,11 @@ function App() {
         {/* search={search} setSearch={setSearch} */}
       </div>
       <Routes>
-        <Route path="/" element={<Movies />}/>
-        <Route path="/card" element={<Card/>}/>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/movie/:movieId" element={<MoviePage/>}/>
       </Routes>
     </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
