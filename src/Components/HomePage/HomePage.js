@@ -3,10 +3,10 @@ import axios from "axios";
 import MovieCard from "../MovieCard/MovieCard";
 import "./HomePage.css";
 
-
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [searchMovie, setSearchMovie] = useState();
 
   async function getMovies() {
     const response = await axios.get(
@@ -28,15 +28,41 @@ const HomePage = () => {
       });
   }, []);
 
+  function handlesearchMovie(event) {
+    if (event.key === "Enter") {
+      fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}` +
+          searchMovie
+      );
+      setSearchMovie("");
+    }
+  }
+
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading... Please wait!</div>;
   }
 
   return (
-    <div className="home-page-container">
-      {movies.map((movie) => (
-        <MovieCard movie={movie} />
-      ))}
+    <div>
+      <div className="input-box-container">
+        <div>
+        <h1>MOVIES</h1>
+        </div>
+        <form>
+        <input
+          type="text"
+          placeholder="Search"
+          value={searchMovie}
+          onChange={(e) => setSearchMovie(e.target.value)}
+        />
+        <button onClick={handlesearchMovie}>Search</button>
+        </form>
+      </div>
+      <div className="home-page-container">
+        {movies.map((movie) => (
+          <MovieCard movie={movie} />
+        ))}
+      </div>
     </div>
   );
 };

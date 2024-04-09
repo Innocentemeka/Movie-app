@@ -14,23 +14,9 @@
   align-items: center;
 }
 
-.movie-card-container .movie-card-details h1 {
-  color: #fff;
-  font-size: 10px;
-  font-weight: 700;
-  z-index: 1;
-}
-
-.movie-card-container .movie-card-details p {
-  color: #fff;
-  font-size: 10px;
-  font-weight: 700;
-  z-index: 1;
-}
-
 .movie-card-container img {
-  margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 30px;
+  padding: 10px;
   transition: transform 0.5s;
   cursor: pointer;
 }
